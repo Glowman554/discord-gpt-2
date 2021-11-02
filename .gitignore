@@ -1,0 +1,12 @@
+__pycache__
+.mypy_cache/
+models/
+checkpoint
+samples
+dist-newstyle
+bin
+dataset.npz
+output.json
+dataset/output
+dataset/config.json
+dataset/dataset.txt
