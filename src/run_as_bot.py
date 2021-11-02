@@ -54,7 +54,7 @@ def send_self_bot_message(token, channel, body):
         if response.status_code != 200:
             print(response.text)
             reason = json.loads(response.text)
-            if reason['code'] == 20028:
+            if reason['code'] == 20028 or reason["code"] == 20016:
                 print("Rate limited, waiting " + str(reason['retry_after']) + " seconds")
                 sleep(reason["retry_after"])
             else:
