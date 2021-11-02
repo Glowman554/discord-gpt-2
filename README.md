@@ -19,4 +19,4 @@ python3 src/encode.py ./dataset/dataset.txt dataset.npz --model_name 124M
 
 **Make sure to prepare the dataset first.**
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://raw.githubusercontent.com/Glowman554/discord-gpt-2/master/train_gpt2.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Glowman554/discord-gpt-2)
