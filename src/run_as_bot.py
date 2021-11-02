@@ -110,7 +110,6 @@ def sample_model(
                 generated += batch_size
 
                 text = enc.decode(out[i])                
-                text = " ".join(text.split('\n'))
 
                 for x in text.split('\n'):
                     if x != '':
