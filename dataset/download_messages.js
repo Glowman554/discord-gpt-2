@@ -11,6 +11,12 @@ async function fetch_all_messages(token, channel_id, callback = null, limit = nu
 			}
 		});
 
+		if (response.status != 200) {
+			console.log(`Error fetching messages: ${response.status}`);
+			console.log(await response.text());
+			continue;
+		}
+
 		var data = await response.json();
 
 		for (var i = 0; i < data.length; i++) {

@@ -1,4 +1,8 @@
-var channels = JSON.parse(Deno.readTextFileSync("config.json")).channels;
+var channels = [];
+
+for await (const dirEntry of Deno.readDir('output')) {
+	channels.push(dirEntry.name.replace(".txt", ""));
+}
 
 var dataset = [];
 

@@ -8,5 +8,5 @@ bin
 dataset.npz
 output.json
 dataset/output
-dataset/config.json
+dataset/config.json*
 dataset/dataset.txt
