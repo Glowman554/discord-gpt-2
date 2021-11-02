@@ -112,14 +112,16 @@ def sample_model(
                 text = enc.decode(out[i])                
                 text = " ".join(text.split('\n'))
 
-                print("Sent message to discord: " + text)
-                try:
-                    if _self_bot_:
-                        send_self_bot_message(_token_, _channel_, text)
-                    else:
-                        send_bot_message(_token_, _channel_, text)
-                except Exception as e:
-                    print(e)
+                for x in text.split('\n'):
+                    if x != '':
+                        print("Sent message to discord: " + x)
+                        try:
+                            if _self_bot_:
+                                send_self_bot_message(_token_, _channel_, x)
+                            else:
+                                send_bot_message(_token_, _channel_, x)
+                        except Exception as e:
+                            print(e)
 
 
 if __name__ == '__main__':

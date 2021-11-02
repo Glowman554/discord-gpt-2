@@ -84,11 +84,12 @@ def sample_model(
                 generated += batch_size
 
                 text = enc.decode(out[i])                
-                text = " ".join(text.split('\n'))
 
                 print("=" * 20 + "\n" + text + "\n" + "=" * 20)
 
-                _output.append(text)
+                for i in text.split('\n'):
+                    if i != '':
+                        _output.append(i)
 
             with open(_output_, 'w') as f:
                 json.dump(_output, f, indent=4)
