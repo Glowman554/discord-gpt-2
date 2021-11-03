@@ -10,3 +10,4 @@ output.json
 dataset/output
 dataset/config.json*
 dataset/dataset.txt
+output
