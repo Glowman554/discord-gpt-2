@@ -7,7 +7,7 @@ for await (const dirEntry of Deno.readDir('output')) {
 var dataset = [];
 
 channels.forEach(function(channel) {
-	console.log("Loading channel " + channel);
+	console.log("Loading dataset " + channel);
 
 	var data = Deno.readTextFileSync(`./output/${channel}.txt`);
 	var data_split = data.toString().split("\n");
