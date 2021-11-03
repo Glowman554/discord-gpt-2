@@ -15,7 +15,6 @@ function generate_word_list(text) {
 	
 	for (var i = 0; i < text.length; i++) {
 		var words = text[i].split(" ");
-		console.log(words)
 
 		words = words.map(word => word.toLowerCase());
 		words = words.map(word => word.replace(/^(http|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?$/gm, ""));
