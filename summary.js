@@ -18,7 +18,7 @@ function generate_word_list(text) {
 
 		words = words.map(word => word.toLowerCase());
 		words = words.map(word => word.replace(/^(http|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?$/gm, ""));
-		words = words.map(word => word.replace(/[^a-zA-Z']/g, ""));
+		words = words.map(word => word.replace(/[^a-zA-Z']/g, " "));
 
 		for (var j = 0; j < words.length; j++) {
 			if (words[j] != "") {
