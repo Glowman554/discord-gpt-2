@@ -16,7 +16,7 @@ async function main() {
 		Deno.mkdirSync("output");
 	}
 
-	var page = 1;
+	var page = parseInt(prompt("Page to start downloading: "));
 
 	while (true) {
 		let comments = await await download_comments(page++);
