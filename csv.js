@@ -42,6 +42,22 @@ export class csv {
 		this.parsed_document.push(values);
 	}
 
+	queryFirst(search, column) {
+		return this.parsed_document.find(row => row[column].indexOf(search) != -1);
+	}
+
+	query(search, column) {
+		var rows_found = [];
+
+		this.parsed_document.forEach(row => {
+			if (row[column].indexOf(search) != -1) {
+				rows_found.push(row);
+			}
+		});
+
+		return rows_found;
+	}
+
 	str() {
 		/**
 		return this:
@@ -108,4 +124,6 @@ export function test_csv() {
 	
 	console.log(csv_parser.str());
 	console.log(csv_parser.serialize());
+
+	console.log(csv_parser.query("testvalue", 0))
 }
